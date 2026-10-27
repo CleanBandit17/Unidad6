@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momentum & Tangente - Performance Visual</title>
+
+  <!-- p5.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ELEMENTO DE AUDIO OCULTO / REPRODUCCIÓN DE ASSETS -->
+  <audio id="audio-player" src="assets/Rihanna - We Found Love (Lyrics) ft. Calvin Harris.mp3" loop></audio>
+
+  <!-- PANEL DE INTERPRETACIÓN (HUD) -->
+  <div id="hud-panel">
+    <div class="hud-header">
+      <h2>MOMENTUM & TANGENTE</h2>
+      <p class="subtitle">Rihanna - We Found Love (ft. Calvin Harris)</p>
+    </div>
+
+    <!-- Controles de Algoritmos -->
+    <div class="hud-group">
+      <label>1. Fricción / Inercia de Vórtice [Tecla 1]</label>
+      <input type="range" id="slider-friccion" min="0.80" max="0.99" step="0.01" value="0.94">
+    </div>
+
+    <div class="hud-group">
+      <label>2. Alineación / Flocking [Tecla 2]</label>
+      <input type="range" id="slider-flocking" min="0" max="3" step="0.1" value="1.0">
+    </div>
+
+    <div class="hud-group">
+      <label>3. Persistencia Physarum [Tecla 3]</label>
+      <input type="range" id="slider-physarum" min="5" max="80" step="1" value="20">
+    </div>
+
+    <div class="hud-group">
+      <label>4. Transición de Espacio / Luz [Tecla T]</label>
+      <input type="range" id="slider-tema" min="0" max="1" step="0.01" value="0">
+    </div>
+
+    <hr class="hud-divider">
+
+    <!-- Guía de Atajos de Teclado -->
+    <div class="hud-shortcuts">
+      <p><strong>Atajos de Performance:</strong></p>
+      <ul>
+        <li><kbd>Click</kbd>: Mover Atractor y Activar Audio</li>
+        <li><kbd>Espacio</kbd>: Liberación Inercial Tangencial (Burst)</li>
+        <li><kbd>T</kbd>: Alternar Espacio Claro / Oscuro</li>
+        <li><kbd>R</kbd>: Reiniciar Agentes</li>
+        <li><kbd>H</kbd>: Ocultar / Mostrar HUD</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
